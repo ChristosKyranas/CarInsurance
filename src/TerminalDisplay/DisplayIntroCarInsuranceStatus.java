@@ -2,6 +2,10 @@ package TerminalDisplay;
 
 public class DisplayIntroCarInsuranceStatus {
 
+    public DisplayIntroCarInsuranceStatus() {
+        System.out.println(toString());
+    }
+
     @Override
     public String toString() {
         String display = (new StringBuilder())

@@ -2,6 +2,10 @@ package TerminalDisplay;
 
 public class DisplayFunctionalityViaTerminal {
 
+    public DisplayFunctionalityViaTerminal() {
+        System.out.println(toString());
+    }
+
     @Override
     public String toString() {
         String display = (new StringBuilder())
