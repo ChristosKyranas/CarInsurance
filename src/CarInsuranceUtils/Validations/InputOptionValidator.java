@@ -2,7 +2,7 @@ package CarInsuranceUtils.Validations;
 
 import java.util.Scanner;
 
-public class validationInputOption {
+public class InputOptionValidator {
 
     boolean inputValid;
     Scanner scan = new Scanner(System.in);
@@ -24,4 +24,6 @@ public class validationInputOption {
         }while (inputValid = true);
         return input;
     }
+
+
 }

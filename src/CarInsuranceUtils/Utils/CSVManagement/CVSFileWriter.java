@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class CVSFileWriter {
 
+    //maybe add as parameter the filename
     private static String CSV_FILE = "VehicleExport.csv";
 
     public static void writeToCsvFile(String response) {
@@ -21,8 +22,11 @@ public class CVSFileWriter {
         }
 
     }
+
+    /*
     public static void main(String[] args) {
         writeToCsvFile("hello world");
     }
+*/
 
 }

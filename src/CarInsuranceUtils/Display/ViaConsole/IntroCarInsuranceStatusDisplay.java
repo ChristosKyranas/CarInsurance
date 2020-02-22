@@ -1,8 +1,8 @@
-package CarInsuranceUtils.TerminalDisplay;
+package CarInsuranceUtils.Display.ViaConsole;
 
-public class DisplayFunctionalityViaTerminal {
+public class IntroCarInsuranceStatusDisplay {
 
-    public DisplayFunctionalityViaTerminal() {
+    public IntroCarInsuranceStatusDisplay() {
         System.out.println(toString());
     }
 
@@ -11,14 +11,11 @@ public class DisplayFunctionalityViaTerminal {
         String display = (new StringBuilder())
                 .append("***************************************\n")
                 .append("*-------------------------------------*\n")
-                .append("*----SELECT FUNCTIONALITY TO PERFORM: *\n")
-                .append("*1) Vehicle Insurance Status          *\n")
-                .append("*2) Forecoming Expiries               *\n")
-                .append("*3) Expiries By Plate                 *\n")
+                .append("*               WELCOME               *\n")
+                .append("*            CAR INSURANCE            *\n")
                 .append("*-------------------------------------*\n")
                 .append("***************************************\n")
                 .toString();
         return display;
     }
-
 }

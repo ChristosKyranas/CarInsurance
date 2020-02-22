@@ -1,8 +1,8 @@
-package CarInsuranceUtils.TerminalDisplay;
+package CarInsuranceUtils.Display.ViaConsole;
 
-public class DisplayExportTypeViaTerminal {
+public class FunctionalityViaConsoleDisplay {
 
-    public DisplayExportTypeViaTerminal() {
+    public FunctionalityViaConsoleDisplay() {
         System.out.println(toString());
     }
 
@@ -11,9 +11,10 @@ public class DisplayExportTypeViaTerminal {
         String display = (new StringBuilder())
                 .append("***************************************\n")
                 .append("*-------------------------------------*\n")
-                .append("*----ENTER EXPORT TYPE:               *\n")
-                .append("*1) File                              *\n")
-                .append("*2) Console                           *\n")
+                .append("*----SELECT FUNCTIONALITY TO PERFORM: *\n")
+                .append("*1) Vehicle Insurance Status          *\n")
+                .append("*2) Forecoming Expiries               *\n")
+                .append("*3) Expiries By Plate                 *\n")
                 .append("*-------------------------------------*\n")
                 .append("***************************************\n")
                 .toString();

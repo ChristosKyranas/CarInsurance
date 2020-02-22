@@ -1,11 +1,11 @@
-import CarInsuranceUtils.TerminalDisplay.Display;
+import CarInsuranceUtils.Display.ViaConsole.AppConsoleDisplay;
 
 public class CarInsuranceApp {
 
     public static void main(String[] args) {
 
-        Display startDisplay = new Display();
-        startDisplay.start();
+        AppConsoleDisplay startAppConsoleDisplay = new AppConsoleDisplay();
+        startAppConsoleDisplay.start();
 
     }
 }
