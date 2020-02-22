@@ -1,4 +1,4 @@
-import TerminalDisplay.Display;
+import CarInsuranceUtils.TerminalDisplay.Display;
 
 public class CarInsuranceApp {
 

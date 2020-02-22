@@ -1,4 +1,4 @@
-package Validations;
+package CarInsuranceUtils.Validations;
 
 import java.util.Scanner;
 

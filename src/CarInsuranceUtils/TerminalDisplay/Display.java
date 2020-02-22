@@ -1,8 +1,6 @@
-package TerminalDisplay;
+package CarInsuranceUtils.TerminalDisplay;
 
-import Validations.validationInputOption;
-
-import java.util.Scanner;
+import CarInsuranceUtils.Validations.validationInputOption;
 
 public class Display {
 
@@ -15,6 +13,7 @@ public class Display {
         //Display Functionality Options
         new DisplayFunctionalityViaTerminal();
 
+        //Create an Input Validator
         validationInputOption input = new validationInputOption();
 
         //Read User's Functionality Option
@@ -23,8 +22,9 @@ public class Display {
         //Display Export Type Options
         new DisplayExportTypeViaTerminal();
 
-        //Read User's ExportType Option
+        //Read User's Export Type Option
         int exportTypeOption = input.fetchAndCheckBoundsValidation(1, 2);
+
         System.out.println("Your Functionality Option is: "+ fuctionalityOption + "\n"
                 + "Your ExportType Option is: "+ exportTypeOption +"\n");
     }

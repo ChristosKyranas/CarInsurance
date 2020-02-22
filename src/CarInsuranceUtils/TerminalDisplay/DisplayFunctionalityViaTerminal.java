@@ -1,4 +1,4 @@
-package TerminalDisplay;
+package CarInsuranceUtils.TerminalDisplay;
 
 public class DisplayFunctionalityViaTerminal {
 
