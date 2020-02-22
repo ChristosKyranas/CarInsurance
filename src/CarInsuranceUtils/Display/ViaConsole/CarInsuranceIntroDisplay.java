@@ -1,8 +1,8 @@
 package CarInsuranceUtils.Display.ViaConsole;
 
-public class IntroCarInsuranceStatusDisplay {
+public class CarInsuranceIntroDisplay {
 
-    public IntroCarInsuranceStatusDisplay() {
+    public CarInsuranceIntroDisplay() {
         System.out.println(toString());
     }
 

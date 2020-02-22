@@ -9,7 +9,7 @@ public class AppConsoleDisplay {
     public void start(){
 
         //Display The Intro
-        new IntroCarInsuranceStatusDisplay();
+        new CarInsuranceIntroDisplay();
 
         //Display Functionality Options
         new FunctionalityViaConsoleDisplay();
