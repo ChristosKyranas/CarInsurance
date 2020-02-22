@@ -7,8 +7,8 @@ public class CSVFileReader {
     //------------------------------------------------------------
     //Be Careful With File's Path
     //------------------------------------------------------------
+    private static String CSV_FILE = "Resources/CSV/VehiclesData.csv";
     public static int MAX_ARRAY_ROW_SIZE = 110;
-    private static String CSV_FILE = "Resources/VehiclesData.csv";
     public static int MAX_ARRAY_COLUMN_SIZE = 5;
 
     public static String[][] readCSV() {
