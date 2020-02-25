@@ -52,7 +52,7 @@ public class CSVFileReader {
         return new File(classLoader.getResource(CSV_FILE).getFile());
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         readCSV();
-    }
+    }*/
 }

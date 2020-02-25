@@ -20,6 +20,7 @@ public class AppConsoleDisplay {
         //Read User's Functionality Option
         int fuctionalityOption = input.fetchAndCheckBoundsValidation(1, 3);
         new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(fuctionalityOption));
+
         //Display Export Type Options
         new ExportTypeViaConsoleDisplay();
 
