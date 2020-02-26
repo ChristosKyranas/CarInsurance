@@ -1,5 +1,7 @@
 package CarInsuranceUtils.Validations;
 
+import CarInsuranceUtils.Factories.InputValidator;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 

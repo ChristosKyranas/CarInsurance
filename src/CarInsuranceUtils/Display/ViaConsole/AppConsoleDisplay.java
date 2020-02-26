@@ -1,7 +1,7 @@
 package CarInsuranceUtils.Display.ViaConsole;
 
 import CarInsuranceUtils.Enumerations.FunctionalityEnum;
-import CarInsuranceUtils.FunctionalityManagement.FunctionalityPerformance;
+import CarInsuranceUtils.Services.FunctionalityPerformance;
 import CarInsuranceUtils.Validations.InputOptionValidator;
 
 public class AppConsoleDisplay {
@@ -18,7 +18,7 @@ public class AppConsoleDisplay {
         InputOptionValidator input = new InputOptionValidator();
 
         //Read User's Functionality Option
-        int fuctionalityOption = input.fetchAndCheckBoundsValidation(1, 3);
+        int fuctionalityOption = input.fetchAndCheckBoundsValidation(1, 4);
         new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(fuctionalityOption));
 
         //Display Export Type Options

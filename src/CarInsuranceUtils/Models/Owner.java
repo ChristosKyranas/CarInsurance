@@ -5,6 +5,7 @@ public class Owner {
     private Integer ownerId;
     private String userName;
     private String surName;
+    private Integer fine;
 
     public Integer getOwnerId() {
         return ownerId;
@@ -30,4 +31,11 @@ public class Owner {
         this.surName = surName;
     }
 
+    public Integer getFine() {
+        return fine;
+    }
+
+    public void setFine(Integer fine) {
+        this.fine = fine;
+    }
 }

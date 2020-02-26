@@ -4,8 +4,8 @@ public enum FunctionalityEnum {
 
     VEHICLE_INSURANCE_STATUS(1),
     FORECOMING_EXPIRIES(2),
-    OWNERS_FINE(3);
-    //ORDER_VEHICLES(3);
+    ORDER_VEHICLES(3),
+    OWNERS_FINE(4);
 
     private final int option;
 
