@@ -1,16 +1,20 @@
 package CarInsuranceUtils.Models;
 
-import CarInsuranceUtils.Utils.StringDateHelper;
-import CarInsuranceUtils.Validations.InputPlateValidator;
-
-import java.util.*;
-
-public class Vehicle {
+public class Vehicle implements Comparable<Vehicle> {
 
     private static final int PLATE_NUMBER_LENGTH = 7;
     private Integer owner;
     private String plateNumber;
     private String insuranceDate;
+
+    public Vehicle() {
+    }
+
+    public Vehicle(String plateNumber, String insuranceDate, int owner) {
+        this.plateNumber = plateNumber;
+        this.insuranceDate = insuranceDate;
+        this.owner = owner;
+    }
 
     public Integer getOwner() {
         return owner;
