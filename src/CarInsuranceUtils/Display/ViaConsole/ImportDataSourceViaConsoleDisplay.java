@@ -1,8 +1,8 @@
 package CarInsuranceUtils.Display.ViaConsole;
 
-public class ImportTypeViaConsoleDisplay {
+public class ImportDataSourceViaConsoleDisplay {
 
-    public ImportTypeViaConsoleDisplay() {
+    public ImportDataSourceViaConsoleDisplay() {
         System.out.println(toString());
     }
 
@@ -11,7 +11,7 @@ public class ImportTypeViaConsoleDisplay {
         String display = (new StringBuilder())
                 .append("***************************************\n")
                 .append("*-------------------------------------*\n")
-                .append("*----ENTER IMPORT TYPE:               *\n")
+                .append("*----ENTER DATA SOURCE:               *\n")
                 .append("*1) File                              *\n")
                 .append("*2) Database                          *\n")
                 .append("*-------------------------------------*\n")

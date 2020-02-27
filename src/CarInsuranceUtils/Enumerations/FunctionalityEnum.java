@@ -3,7 +3,7 @@ package CarInsuranceUtils.Enumerations;
 public enum FunctionalityEnum {
 
     VEHICLE_INSURANCE_STATUS(1),
-    FORECOMING_EXPIRIES(2),
+    FORECOMING_EXPIRES(2),
     ORDER_VEHICLES(3),
     OWNERS_FINE(4);
 
