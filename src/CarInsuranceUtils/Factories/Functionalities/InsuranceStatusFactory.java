@@ -1,7 +1,7 @@
 package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
-import CarInsuranceUtils.Services.Functionalities.InsuranceStatusImpl;
+import CarInsuranceUtils.Services.FunctionalitiesImplementations.InsuranceStatusImpl;
 import CarInsuranceUtils.Services.InsuranceStatus;
 import org.jetbrains.annotations.NotNull;
 

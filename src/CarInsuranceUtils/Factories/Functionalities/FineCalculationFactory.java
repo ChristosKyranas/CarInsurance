@@ -2,7 +2,7 @@ package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.FineCalculation;
-import CarInsuranceUtils.Services.Functionalities.FineCalculationImpl;
+import CarInsuranceUtils.Services.FunctionalitiesImplementations.FineCalculationImpl;
 
 public class FineCalculationFactory {
 

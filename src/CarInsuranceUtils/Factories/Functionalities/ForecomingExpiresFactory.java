@@ -2,7 +2,7 @@ package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.ForecomingExpires;
-import CarInsuranceUtils.Services.Functionalities.ForecomingExpiresImpl;
+import CarInsuranceUtils.Services.FunctionalitiesImplementations.ForecomingExpiresImpl;
 
 public class ForecomingExpiresFactory {
 

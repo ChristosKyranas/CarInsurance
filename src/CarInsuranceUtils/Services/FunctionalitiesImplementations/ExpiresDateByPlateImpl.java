@@ -1,4 +1,4 @@
-package CarInsuranceUtils.Services.Functionalities;
+package CarInsuranceUtils.Services.FunctionalitiesImplementations;
 
 import CarInsuranceUtils.Models.Vehicle;
 import CarInsuranceUtils.Services.ExpiresDateByPlate;

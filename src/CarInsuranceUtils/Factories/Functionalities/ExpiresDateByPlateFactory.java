@@ -2,7 +2,7 @@ package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.ExpiresDateByPlate;
-import CarInsuranceUtils.Services.Functionalities.ExpiresDateByPlateImpl;
+import CarInsuranceUtils.Services.FunctionalitiesImplementations.ExpiresDateByPlateImpl;
 
 public class ExpiresDateByPlateFactory {
 
