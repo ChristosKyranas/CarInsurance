@@ -9,12 +9,13 @@ import java.util.Scanner;
 
 public class InsuranceStatusImpl extends InsuranceStatus {
 
-    public void searchPlate(List<Vehicle> vehicleList){
+    public String searchPlate(List<Vehicle> vehicleList){
         boolean acceptablePlateFormat = false;
 
         InputPlateValidator input = new InputPlateValidator();
         Scanner scan = new Scanner(System.in);
         String plate = scan.nextLine();
+        String result = "";
 
         do {
             //Check Plate's Format Validation
@@ -24,19 +25,19 @@ public class InsuranceStatusImpl extends InsuranceStatus {
                 //Search Via "for()"
                 for (Vehicle e : vehicleList) {
                     if (e.getPlateNumber().equals(plate)) {
-                        System.out.println("1) Via for(): " + e.toString());
+                        result += e.toString();
                         //If Plate Is Found, Break
                         break;
                     }
                 }
 
-                //Option 2
+                /*//Option 2
                 //Search Via "stream()"
                 String finalPlate = plate;
                 System.out.print("2) Via stream(): ");
                 vehicleList.stream()
                         .filter(e -> e.getPlateNumber().equals(finalPlate))
-                        .forEach(System.out::println);
+                        .forEach(System.out::println);*/
 
                 acceptablePlateFormat = true;
             }
@@ -48,5 +49,6 @@ public class InsuranceStatusImpl extends InsuranceStatus {
         }while (!acceptablePlateFormat);
         //When User Has Typed Correct Plate Number Format
         //Either It Was Found In The Repository Or Not
+        return result;
     }
 }

@@ -6,5 +6,5 @@ import java.util.List;
 
 public abstract class ExpiresDateByPlate {
 
-    public abstract void searchExpiresByPlate(List<Vehicle> vehicleList);
+    public abstract String searchExpiresByPlate(List<Vehicle> vehicleList);
 }

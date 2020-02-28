@@ -10,9 +10,8 @@ public class ExpiresDateByPlateFactory {
 
         switch (importOption) {
             case FILE:
-                return new ExpiresDateByPlateImpl();
             case DATABASE:
-                return null;
+                return new ExpiresDateByPlateImpl();
         }
         return null;
 

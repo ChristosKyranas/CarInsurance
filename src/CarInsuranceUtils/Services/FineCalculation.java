@@ -6,6 +6,6 @@ import java.util.List;
 
 public abstract class FineCalculation {
 
-    public abstract void calculateFine(List<Vehicle> vehicleList);
+    public abstract String calculateFine(List<Vehicle> vehicleList);
 
 }

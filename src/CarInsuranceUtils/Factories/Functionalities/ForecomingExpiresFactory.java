@@ -10,9 +10,8 @@ public class ForecomingExpiresFactory {
 
             switch (importOption) {
                 case FILE:
-                    return new ForecomingExpiresImpl();
                 case DATABASE:
-                    return null;
+                    return new ForecomingExpiresImpl();
             }
             return null;
 

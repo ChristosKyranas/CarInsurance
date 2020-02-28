@@ -1,33 +1,22 @@
 package CarInsuranceUtils.Services;
 
-
+import CarInsuranceUtils.Enumerations.ExportTypeEnum;
 import CarInsuranceUtils.Enumerations.FunctionalityEnum;
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Factories.Functionalities.ExpiresDateByPlateFactory;
 import CarInsuranceUtils.Factories.Functionalities.FineCalculationFactory;
 import CarInsuranceUtils.Factories.Functionalities.ForecomingExpiresFactory;
 import CarInsuranceUtils.Factories.Functionalities.InsuranceStatusFactory;
-import CarInsuranceUtils.Factories.VehicleRepositoryFactory;
+import CarInsuranceUtils.Factories.Repository.VehicleRepositoryFactory;
 import CarInsuranceUtils.Models.Vehicle;
 import CarInsuranceUtils.Repositories.VehicleRepository;
-import CarInsuranceUtils.Repositories.VehicleRepositoryViaFileImpl;
-import CarInsuranceUtils.Services.Functionalities.ExpiresDateByPlateImpl;
-import CarInsuranceUtils.Services.Functionalities.FineCalculationImpl;
-import CarInsuranceUtils.Services.Functionalities.ForecomingExpiresImpl;
-import CarInsuranceUtils.Services.Functionalities.InsuranceStatusImpl;
+import CarInsuranceUtils.Factories.Exports.ResultsFactory;
 
 import java.util.List;
 
 public class FunctionalityPerformance {
 
-    public FunctionalityPerformance(FunctionalityEnum functionalityOption, ImportTypeEnum importOption) {
-
-        /*switch (importOption) {
-            case FILE:
-                repository = new VehicleRepository();
-            case DATABASE:
-                //repository = new ...
-        }*/
+    public FunctionalityPerformance(FunctionalityEnum functionalityOption, ImportTypeEnum importOption, ExportTypeEnum exportOption) {
 
         VehicleRepository repository = VehicleRepositoryFactory.getInstance(importOption);
         List<Vehicle> vehicleList = repository.collect();
@@ -36,30 +25,30 @@ public class FunctionalityPerformance {
             case VEHICLE_INSURANCE_STATUS:
                 System.out.println("VEHICLE_INSURANCE_STATUS");
                 //InsuranceStatus insuranceStatus = InsuranceStatusFactory.getInstance(importOption);
-                InsuranceStatus insuranceStatus = new InsuranceStatusImpl();
+                InsuranceStatus insuranceStatus = InsuranceStatusFactory.getInstance(importOption);
                 //via File or via Database
-                insuranceStatus.searchPlate(vehicleList);
+                ResultsFactory.getInstance(insuranceStatus.searchPlate(vehicleList), exportOption);
                 break;
             case FORECOMING_EXPIRES:
-                System.out.println("FORECOMING_EXPIRIES");
-                //via File or via Database
+                System.out.println("FORECOMING_EXPIRES");
                 //ForecomingExpires forecomingExpires = ForecomingExpiresFactory.getInstance(importOption);
-                ForecomingExpires forecomingExpires = new ForecomingExpiresImpl();
-                forecomingExpires.searchForecomingExpires(vehicleList);
+                ForecomingExpires forecomingExpires = ForecomingExpiresFactory.getInstance(importOption);
+                //via File or via Database
+                ResultsFactory.getInstance(forecomingExpires.searchForecomingExpires(vehicleList), exportOption);
                 break;
             case ORDER_VEHICLES:
                 System.out.println("ORDER_VEHICLES");
-                //via File or via Database
                 //ExpiresDateByPlate expiresDateByPlate = ExpiresDateByPlateFactory.getInstance(importOption);
-                ExpiresDateByPlate expiresDateByPlate = new ExpiresDateByPlateImpl();
-                expiresDateByPlate.searchExpiresByPlate(vehicleList);
+                ExpiresDateByPlate expiresDateByPlate = ExpiresDateByPlateFactory.getInstance(importOption);
+                //via File or via Database
+                ResultsFactory.getInstance(expiresDateByPlate.searchExpiresByPlate(vehicleList), exportOption);
                 break;
             case OWNERS_FINE:
                 System.out.println("OWNERS_FINE");
-                //via File or via Database
                 //FineCalculation fineCalculation = FineCalculationFactory.getInstance(importOption);
-                FineCalculation fineCalculation = new FineCalculationImpl();
-                fineCalculation.calculateFine(vehicleList);
+                FineCalculation fineCalculation = FineCalculationFactory.getInstance(importOption);
+                //via File or via Database
+                ResultsFactory.getInstance(fineCalculation.calculateFine(vehicleList), exportOption);
                 break;
         }
     }

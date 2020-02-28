@@ -6,6 +6,6 @@ import java.util.List;
 
 public abstract class InsuranceStatus {
 
-    public abstract void searchPlate(List<Vehicle> vehicleList);
+    public abstract String searchPlate(List<Vehicle> vehicleList);
 
 }

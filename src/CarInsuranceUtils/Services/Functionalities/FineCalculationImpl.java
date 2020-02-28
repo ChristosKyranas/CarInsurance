@@ -9,7 +9,7 @@ import java.util.*;
 public class FineCalculationImpl extends FineCalculation {
 
 
-    public void calculateFine(List<Vehicle> vehicleList) {
+    public String calculateFine(List<Vehicle> vehicleList) {
 
         Scanner scan = new Scanner(System.in);
         int fineCost = scan.nextInt();
@@ -21,9 +21,9 @@ public class FineCalculationImpl extends FineCalculation {
             expires = dateHelper.isExpiredInsurance(e.getInsuranceDate());
             if (expires == false){
                 vehicleExpiredList.add(e);
-                System.out.println("The " + e.getOwner()
+                /*System.out.println("The " + e.getOwner()
                         + "'s vehicle plate number is " + e.getPlateNumber()
-                        + " and has expired " + e.getInsuranceDate());
+                        + " and has expired " + e.getInsuranceDate());*/
             }
         }
 
@@ -35,13 +35,14 @@ public class FineCalculationImpl extends FineCalculation {
             }
             frequencyMap.put(vehicle.getOwner(), count + 1);
         }
-
+        String result = "";
         for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()){
             //System.out.println(entry.getKey() + " " + entry.getValue());
-            System.out.println("The " + entry.getKey()
-                    + " has to pay fine " + entry.getValue() * fineCost + "Eyros");
+            result += "The " + entry.getKey()
+                    + " has to pay fine " + entry.getValue() * fineCost + "Eyros" + "\n";
         }
         //System.out.println(frequencyMap.size());
+        return result;
     }
 
 

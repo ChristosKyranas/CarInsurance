@@ -1,4 +1,4 @@
-package CarInsuranceUtils.Factories;
+package CarInsuranceUtils.Factories.Repository;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Repositories.VehicleRepository;

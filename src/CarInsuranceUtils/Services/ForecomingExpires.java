@@ -6,6 +6,6 @@ import java.util.List;
 
 public abstract class ForecomingExpires {
 
-    public abstract void searchForecomingExpires(List<Vehicle> vehicleList);
+    public abstract String searchForecomingExpires(List<Vehicle> vehicleList);
 
 }

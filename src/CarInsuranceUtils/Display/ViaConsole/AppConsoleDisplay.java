@@ -1,5 +1,6 @@
 package CarInsuranceUtils.Display.ViaConsole;
 
+import CarInsuranceUtils.Enumerations.ExportTypeEnum;
 import CarInsuranceUtils.Enumerations.FunctionalityEnum;
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.FunctionalityPerformance;
@@ -27,16 +28,17 @@ public class AppConsoleDisplay {
 
         //Read User's Import Option
         int importOption = input.fetchAndCheckBoundsValidation(1, 2);
-        new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(fuctionalityOption), ImportTypeEnum.getImportTypeEnum(importOption));
-
         //Display Export Type Options
         new ExportTypeViaConsoleDisplay();
 
         //Read User's Export Type Option
-        int exportTypeOption = input.fetchAndCheckBoundsValidation(1, 2);
+        int exportOption = input.fetchAndCheckBoundsValidation(1, 2);
+        new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(fuctionalityOption), ImportTypeEnum.getImportTypeEnum(importOption), ExportTypeEnum.getExportTypeEnum(exportOption));
+
+
 
         System.out.println("Your Functionality Option is: "+ fuctionalityOption + "\n"
-                + "Your ExportType Option is: "+ exportTypeOption +"\n");
+                + "Your ExportType Option is: "+ exportOption +"\n");
     }
 
 }

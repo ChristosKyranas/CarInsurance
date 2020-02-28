@@ -10,9 +10,8 @@ public class FineCalculationFactory {
 
         switch (importOption) {
             case FILE:
-                return new FineCalculationImpl();
             case DATABASE:
-                return null;
+                return new FineCalculationImpl();
         }
         return null;
 

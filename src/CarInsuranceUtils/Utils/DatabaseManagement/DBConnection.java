@@ -1,15 +1,10 @@
 package CarInsuranceUtils.Utils.DatabaseManagement;
 
-
-import CarInsuranceUtils.Mappers.DBVehicleMapper;
 import CarInsuranceUtils.Models.DatabaseConfiguration;
-import CarInsuranceUtils.Models.Vehicle;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class DBConnection {

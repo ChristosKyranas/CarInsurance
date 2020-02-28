@@ -9,27 +9,29 @@ import java.util.List;
 
 public class ExpiresDateByPlateImpl extends ExpiresDateByPlate {
 
-    public void searchExpiresByPlate(List<Vehicle> vehicleList){
+    public String searchExpiresByPlate(List<Vehicle> vehicleList){
         StringDateHelper dateHelper = new StringDateHelper();
         boolean expires;
         List<Vehicle> vehicleExpiredList = new ArrayList<>();
         List<Vehicle> sortedVehicleExpiredList;
+        String result = "";
         for(Vehicle e : vehicleList){
             expires = dateHelper.isExpiredInsurance(e.getInsuranceDate());
             if (expires == false){
                 vehicleExpiredList.add(e);
-                System.out.println("The " + e.getOwner()
+                /*System.out.println("The " + e.getOwner()
                         + "'s vehicle plate number is " + e.getPlateNumber()
-                        + " and has expired " + e.getInsuranceDate());
+                        + " and has expired " + e.getInsuranceDate());*/
             }
         }
         if (!vehicleExpiredList.isEmpty()){
             sortedVehicleExpiredList = sortVehicleList(vehicleExpiredList);
             System.out.println("SortedList");
             for (Vehicle e : sortedVehicleExpiredList){
-                //System.out.println(e.toString());
+                result += e.toString();
             }
         }
+        return result;
     }
 
     private static List<Vehicle> sortVehicleList(List<Vehicle> vehicleList) {

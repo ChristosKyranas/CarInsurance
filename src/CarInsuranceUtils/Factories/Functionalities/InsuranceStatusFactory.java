@@ -3,17 +3,17 @@ package CarInsuranceUtils.Factories.Functionalities;
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.Functionalities.InsuranceStatusImpl;
 import CarInsuranceUtils.Services.InsuranceStatus;
+import org.jetbrains.annotations.NotNull;
 
 
 public class InsuranceStatusFactory {
 
-    public static InsuranceStatus getInstance(ImportTypeEnum importOption) {
+    public static InsuranceStatus getInstance(@NotNull ImportTypeEnum importOption) {
 
         switch (importOption) {
             case FILE:
-                return new InsuranceStatusImpl();
             case DATABASE:
-                return null;
+                return new InsuranceStatusImpl();
         }
         return null;
     }
