@@ -6,7 +6,7 @@ import CarInsuranceUtils.Utils.StringDateHelper;
 
 import java.util.*;
 
-public class FineCalculationViaFileImpl extends FineCalculation {
+public class FineCalculationImpl extends FineCalculation {
 
 
     public void calculateFine(List<Vehicle> vehicleList) {

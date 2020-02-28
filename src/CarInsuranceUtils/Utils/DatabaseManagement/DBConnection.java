@@ -1,9 +1,9 @@
-package CarInsuranceUtils.Factories;
+package CarInsuranceUtils.Utils.DatabaseManagement;
 
 
 import CarInsuranceUtils.Mappers.DBVehicleMapper;
+import CarInsuranceUtils.Models.DatabaseConfiguration;
 import CarInsuranceUtils.Models.Vehicle;
-import CarInsuranceUtils.Utils.DatabaseManagement.DatabaseConfiguration;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class DBConnectionFactory {
+public class DBConnection {
 
     public static Connection getConnection() {
         try {
@@ -31,7 +31,7 @@ public class DBConnectionFactory {
     private static DatabaseConfiguration loadDatabaseConfiguration() {
         Properties properties = new Properties();
 
-        try (InputStream input = DBConnectionFactory.class.getClassLoader().getResourceAsStream("Resources/application.properties")) {
+        try (InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("Resources/application.properties")) {
             properties.load(input);
 
             return new DatabaseConfiguration(
@@ -44,23 +44,8 @@ public class DBConnectionFactory {
         }
     }
 
-    public static void main(String[] args) {
-        Connection connection = DBConnectionFactory.getConnection();
-        List<Vehicle> vehicles = new ArrayList<>();
+   /* public static void main(String[] args) {
 
-        try {
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT A.platenumber, B.expiry_date, C.owner_id  " +
-                    "FROM VEHICLE_INSURANCE.vehicle A, VEHICLE_INSURANCE.insurance B, VEHICLE_INSURANCE.owner C " +
-                    "WHERE A.insurance = B.insurance_id AND A.owner = C.owner_id " +
-                    "ORDER BY A.insurance;");
-            while (rs.next()) {
-                vehicles.add(DBVehicleMapper.mapVehicleToRs(rs));
-            }
-            //System.out.println("Vehicle info: " + vehicles.get(0).getPlateNumber() );
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
 
-    }
+    }*/
 }

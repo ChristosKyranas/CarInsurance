@@ -1,10 +1,8 @@
 package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
-import CarInsuranceUtils.Services.FineCalculation;
 import CarInsuranceUtils.Services.ForecomingExpires;
-import CarInsuranceUtils.Services.Functionalities.FineCalculationViaFileImpl;
-import CarInsuranceUtils.Services.Functionalities.ForecomingExpiresViaFileImpl;
+import CarInsuranceUtils.Services.Functionalities.ForecomingExpiresImpl;
 
 public class ForecomingExpiresFactory {
 
@@ -12,7 +10,7 @@ public class ForecomingExpiresFactory {
 
             switch (importOption) {
                 case FILE:
-                    return new ForecomingExpiresViaFileImpl();
+                    return new ForecomingExpiresImpl();
                 case DATABASE:
                     return null;
             }

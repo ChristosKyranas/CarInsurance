@@ -7,7 +7,7 @@ import CarInsuranceUtils.Utils.StringDateHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExpiresDateByPlateViaFileImpl extends ExpiresDateByPlate {
+public class ExpiresDateByPlateImpl extends ExpiresDateByPlate {
 
     public void searchExpiresByPlate(List<Vehicle> vehicleList){
         StringDateHelper dateHelper = new StringDateHelper();
@@ -27,7 +27,7 @@ public class ExpiresDateByPlateViaFileImpl extends ExpiresDateByPlate {
             sortedVehicleExpiredList = sortVehicleList(vehicleExpiredList);
             System.out.println("SortedList");
             for (Vehicle e : sortedVehicleExpiredList){
-                System.out.println(e.toString());
+                //System.out.println(e.toString());
             }
         }
     }

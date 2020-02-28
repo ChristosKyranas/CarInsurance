@@ -2,7 +2,7 @@ package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Services.ExpiresDateByPlate;
-import CarInsuranceUtils.Services.Functionalities.ExpiresDateByPlateViaFileImpl;
+import CarInsuranceUtils.Services.Functionalities.ExpiresDateByPlateImpl;
 
 public class ExpiresDateByPlateFactory {
 
@@ -10,7 +10,7 @@ public class ExpiresDateByPlateFactory {
 
         switch (importOption) {
             case FILE:
-                return new ExpiresDateByPlateViaFileImpl();
+                return new ExpiresDateByPlateImpl();
             case DATABASE:
                 return null;
         }

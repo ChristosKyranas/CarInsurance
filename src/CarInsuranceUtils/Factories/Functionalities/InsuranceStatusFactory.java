@@ -1,7 +1,7 @@
 package CarInsuranceUtils.Factories.Functionalities;
 
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
-import CarInsuranceUtils.Services.Functionalities.InsuranceStatusViaFileImpl;
+import CarInsuranceUtils.Services.Functionalities.InsuranceStatusImpl;
 import CarInsuranceUtils.Services.InsuranceStatus;
 
 
@@ -11,7 +11,7 @@ public class InsuranceStatusFactory {
 
         switch (importOption) {
             case FILE:
-                return new InsuranceStatusViaFileImpl();
+                return new InsuranceStatusImpl();
             case DATABASE:
                 return null;
         }

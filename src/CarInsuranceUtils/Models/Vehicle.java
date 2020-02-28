@@ -66,10 +66,5 @@ public class Vehicle implements Comparable<Vehicle> {
 
     }
 
-    public String toString(Vehicle vehicle){
-        return "The " + vehicle.getOwner()
-                + "'s vehicle plate number is " + vehicle.getPlateNumber()
-                + " and expires in " + vehicle.getInsuranceDate();
-    }
 
 }

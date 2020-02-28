@@ -7,7 +7,7 @@ import CarInsuranceUtils.Validations.InputPlateValidator;
 import java.util.List;
 import java.util.Scanner;
 
-public class InsuranceStatusViaFileImpl extends InsuranceStatus {
+public class InsuranceStatusImpl extends InsuranceStatus {
 
     public void searchPlate(List<Vehicle> vehicleList){
         boolean acceptablePlateFormat = false;
