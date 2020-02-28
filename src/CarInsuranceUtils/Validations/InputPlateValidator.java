@@ -6,6 +6,7 @@ public class InputPlateValidator {
 
     public static final String PLATE_NUMBER_FORMAT = "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]{3}-[0123456789]{4}";
 
+    //check inputPlateNumber's pattern
     public static boolean validatePlateNumber(String plateNumber) {
 
         final Pattern pattern = Pattern.compile(PLATE_NUMBER_FORMAT);

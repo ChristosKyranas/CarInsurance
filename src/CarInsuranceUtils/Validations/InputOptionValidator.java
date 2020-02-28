@@ -2,18 +2,14 @@ package CarInsuranceUtils.Validations;
 
 import java.util.Scanner;
 
-public class InputOptionValidator{
+public class InputOptionValidator {
 
-    boolean inputValid;
-    Scanner scan = new Scanner(System.in);
-    int input;
+    //check the inputOption's bounds and return if correct
+    public static int fetchAndCheckBoundsValidation(int lowLimit, int upperLimit){
 
-    public int fetchAndCheckBoundsValidation(int lowLimit, int upperLimit){
-        input = scan.nextInt();
-        inputValid = false;
-        do {
+        Scanner scan = new Scanner(System.in);
+        int input = scan.nextInt();
             if(input >= lowLimit && input <= upperLimit){
-                inputValid = true;
                 return input;
             }
             else{
@@ -21,9 +17,6 @@ public class InputOptionValidator{
                                 + "Give Your Option Again");
                 fetchAndCheckBoundsValidation(lowLimit, upperLimit);
             }
-        }while (inputValid = true);
-        return input;
+            return input;
     }
-
-
 }

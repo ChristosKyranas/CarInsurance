@@ -1,15 +1,15 @@
 package CarInsuranceUtils.Services.FunctionalitiesImplementations;
 
 import CarInsuranceUtils.Models.Vehicle;
-import CarInsuranceUtils.Services.ForecomingExpires;
+import CarInsuranceUtils.Services.UpcomingExpires;
 import CarInsuranceUtils.Utils.StringDateHelper;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class ForecomingExpiresImpl extends ForecomingExpires {
+public class UpcomingExpiresImpl extends UpcomingExpires {
 
-    public String searchForecomingExpires(List<Vehicle> vehicleList){
+    public String searchUpcomingExpires(List<Vehicle> vehicleList){
         Scanner scan = new Scanner(System.in);
         System.out.println("daysRange: ");
         String daysRange = scan.nextLine();

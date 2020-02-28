@@ -6,7 +6,7 @@ import CarInsuranceUtils.Repositories.VehicleRepositoryViaDatabaseImpl;
 import CarInsuranceUtils.Repositories.VehicleRepositoryViaFileImpl;
 
 public class VehicleRepositoryFactory {
-
+    //return instance of importOption between File and Database,
     public static VehicleRepository getInstance(ImportTypeEnum importOption){
         switch (importOption) {
             case FILE:

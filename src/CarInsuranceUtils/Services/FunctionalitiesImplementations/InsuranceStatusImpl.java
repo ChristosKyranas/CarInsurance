@@ -12,14 +12,13 @@ public class InsuranceStatusImpl extends InsuranceStatus {
     public String searchPlate(List<Vehicle> vehicleList){
         boolean acceptablePlateFormat = false;
 
-        InputPlateValidator input = new InputPlateValidator();
         Scanner scan = new Scanner(System.in);
         String plate = scan.nextLine();
         String result = "";
 
         do {
             //Check Plate's Format Validation
-            if (input.validatePlateNumber(plate)) {
+            if (InputPlateValidator.validatePlateNumber(plate)) {
 
                 //Option 1
                 //Search Via "for()"

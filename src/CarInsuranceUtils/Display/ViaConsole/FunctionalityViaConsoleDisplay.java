@@ -13,7 +13,7 @@ public class FunctionalityViaConsoleDisplay {
                 .append("*-------------------------------------*\n")
                 .append("*----SELECT FUNCTIONALITY TO PERFORM: *\n")
                 .append("*1) Vehicle Insurance Status          *\n")
-                .append("*2) Forecoming Expiries               *\n")
+                .append("*2) Forecoming Expires               *\n")
                 .append("*3) Expires By Plate (Ordered)        *\n")
                 .append("*4) Fine Calculation                  *\n")
                 .append("*-------------------------------------*\n")

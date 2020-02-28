@@ -16,28 +16,24 @@ public class AppConsoleDisplay {
         //Display Functionality Options
         new FunctionalityViaConsoleDisplay();
 
-
-        //Create an InputOption Validator
-        InputOptionValidator input = new InputOptionValidator();
-
         //Read User's Functionality Option
-        int fuctionalityOption = input.fetchAndCheckBoundsValidation(1, 4);
+        int functionalityOption = InputOptionValidator.fetchAndCheckBoundsValidation(1, 4);
 
         //Display ImportDataSource Options
         new ImportDataSourceViaConsoleDisplay();
 
         //Read User's Import Option
-        int importOption = input.fetchAndCheckBoundsValidation(1, 2);
+        int importOption = InputOptionValidator.fetchAndCheckBoundsValidation(1, 2);
+
         //Display Export Type Options
         new ExportTypeViaConsoleDisplay();
 
         //Read User's Export Type Option
-        int exportOption = input.fetchAndCheckBoundsValidation(1, 2);
-        new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(fuctionalityOption), ImportTypeEnum.getImportTypeEnum(importOption), ExportTypeEnum.getExportTypeEnum(exportOption));
+        int exportOption = InputOptionValidator.fetchAndCheckBoundsValidation(1, 2);
 
+        new FunctionalityPerformance(FunctionalityEnum.getFunctionalityEnum(functionalityOption), ImportTypeEnum.getImportTypeEnum(importOption), ExportTypeEnum.getExportTypeEnum(exportOption));
 
-
-        System.out.println("Your Functionality Option is: "+ fuctionalityOption + "\n"
+        System.out.println("Your Functionality Option is: "+ functionalityOption + "\n"
                 + "Your ExportType Option is: "+ exportOption +"\n");
     }
 

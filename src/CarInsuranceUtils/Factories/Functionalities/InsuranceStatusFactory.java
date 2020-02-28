@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 
 public class InsuranceStatusFactory {
-
+    //return instance of InsuranceStatusImpl
     public static InsuranceStatus getInstance(@NotNull ImportTypeEnum importOption) {
 
         switch (importOption) {

@@ -5,7 +5,7 @@ import CarInsuranceUtils.Enumerations.FunctionalityEnum;
 import CarInsuranceUtils.Enumerations.ImportTypeEnum;
 import CarInsuranceUtils.Factories.Functionalities.ExpiresDateByPlateFactory;
 import CarInsuranceUtils.Factories.Functionalities.FineCalculationFactory;
-import CarInsuranceUtils.Factories.Functionalities.ForecomingExpiresFactory;
+import CarInsuranceUtils.Factories.Functionalities.UpcomingExpiresFactory;
 import CarInsuranceUtils.Factories.Functionalities.InsuranceStatusFactory;
 import CarInsuranceUtils.Factories.Repository.VehicleRepositoryFactory;
 import CarInsuranceUtils.Models.Vehicle;
@@ -29,12 +29,12 @@ public class FunctionalityPerformance {
                 //via File or via Database
                 ResultsFactory.getInstance(insuranceStatus.searchPlate(vehicleList), exportOption);
                 break;
-            case FORECOMING_EXPIRES:
-                System.out.println("FORECOMING_EXPIRES");
-                //ForecomingExpires forecomingExpires = ForecomingExpiresFactory.getInstance(importOption);
-                ForecomingExpires forecomingExpires = ForecomingExpiresFactory.getInstance(importOption);
+            case UPCOMING_EXPIRES:
+                System.out.println("UPCOMING_EXPIRES");
+                //UpcomingExpires upcomingExpires = UpcomingExpiresFactory.getInstance(importOption);
+                UpcomingExpires upcomingExpires = UpcomingExpiresFactory.getInstance(importOption);
                 //via File or via Database
-                ResultsFactory.getInstance(forecomingExpires.searchForecomingExpires(vehicleList), exportOption);
+                ResultsFactory.getInstance(upcomingExpires.searchUpcomingExpires(vehicleList), exportOption);
                 break;
             case ORDER_VEHICLES:
                 System.out.println("ORDER_VEHICLES");
