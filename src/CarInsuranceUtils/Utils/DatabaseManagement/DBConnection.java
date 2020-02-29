@@ -1,7 +1,7 @@
 package CarInsuranceUtils.Utils.DatabaseManagement;
 
-import CarInsuranceUtils.Models.DatabaseConfiguration;
 
+import CarInsuranceUtils.Models.DatabaseConfiguration;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
