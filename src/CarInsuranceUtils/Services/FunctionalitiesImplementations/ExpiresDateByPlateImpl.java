@@ -50,6 +50,4 @@ public class ExpiresDateByPlateImpl extends ExpiresDateByPlate {
         }
         return vehicleList;
     }
-
-
 }

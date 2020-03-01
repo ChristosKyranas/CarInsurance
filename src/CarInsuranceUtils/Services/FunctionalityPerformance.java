@@ -12,6 +12,7 @@ import CarInsuranceUtils.Models.Vehicle;
 import CarInsuranceUtils.Repositories.VehicleRepository;
 import CarInsuranceUtils.Factories.Exports.ResultsFactory;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class FunctionalityPerformance {
@@ -20,6 +21,12 @@ public class FunctionalityPerformance {
 
         VehicleRepository repository = VehicleRepositoryFactory.getInstance(importOption);
         List<Vehicle> vehicleList = repository.collect();
+        /*HashMap<Integer, Vehicle> vehicleHashMap = new HashMap<>();
+        for (Vehicle vehicle : vehicleList){
+
+            vehicleHashMap.put(vehicle.getOwner(), vehicle);
+        }
+        System.out.println(vehicleHashMap.toString());*/
 
         switch (functionalityOption) {
             case VEHICLE_INSURANCE_STATUS:

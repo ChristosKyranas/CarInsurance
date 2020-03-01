@@ -13,6 +13,7 @@ public class CarInsuranceIntroDisplay {
                 .append("*-------------------------------------*\n")
                 .append("*               WELCOME               *\n")
                 .append("*            CAR INSURANCE            *\n")
+                .append("*     Powered by Christos Kyranas     *\n")
                 .append("*-------------------------------------*\n")
                 .append("***************************************\n")
                 .toString();
