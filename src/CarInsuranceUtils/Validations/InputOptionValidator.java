@@ -9,14 +9,14 @@ public class InputOptionValidator {
 
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
-            if(input >= lowLimit && input <= upperLimit){
-                return input;
-            }
-            else{
-                System.out.println("Your Input Out Of Bounds\n"
-                                + "Give Your Option Again");
-                fetchAndCheckBoundsValidation(lowLimit, upperLimit);
-            }
+        if(input >= lowLimit && input <= upperLimit){
             return input;
+        }
+        else{
+            System.out.println("Your Input Out Of Bounds\n"
+                    + "Give Your Option Again");
+            input = fetchAndCheckBoundsValidation(lowLimit, upperLimit);
+        }
+        return input;
     }
 }
